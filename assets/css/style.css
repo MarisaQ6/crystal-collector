@@ -16,6 +16,11 @@ body {
 
   /* this works so it must be something wrong with the link or what I'm doing  */
 
+  .crystal-image {
+    width: 300px;
+    height: 300px;
+  }
+
     /* blue crystal */
 
     /* green crystal */
@@ -29,7 +34,7 @@ body {
    
 
 
-}
+
 
 
 

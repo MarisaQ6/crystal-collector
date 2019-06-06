@@ -5,20 +5,27 @@ $(document).ready(function() {
 // set up math
 
     var random = Math.floor(Math.random()*102+19);
-    $("#numberMatch").text(Random);
-
+    $("#numberMatch").text(random);
+    console.log ("randomNum",random)
 // var arrays for crystals  
 
     var blue= Math.floor(Math.random()*12+1);
+    console.log ("blue", blue);
     var green= Math.floor(Math.random()*12+1);
+    console.log ("green", green);
     var pink= Math.floor(Math.random()*12+1);
+    console.log("pink", pink);
     var purple= Math.floor(Math.random()*12+1);
+    console.log ("purple", purple);
 
 // set up parameters
 
 var wins= 0;
+console.log ("wins", wins);
 var losses= 0;
+console.log ("losses", losses);
 var userTotal=0;
+console.log("userTotal", userTotal);
 $("#wins").text(wins);
 $("#losses").text(losses);
 
@@ -41,69 +48,72 @@ $("#totalScore").text(userTotal)
 function winning(){
 wins++;
 $("#wins").text(wins);
-reset();
 }
 
 function losing(){
     losses++;
     $("#losses").text(losses);
-    reset();
-}
+    }
 
 // Crystal functions vs user
 
 $("#blueCrystal").on ("click",function(){
-    userTotal + userTotal + blue;
-    console.log("blue" +userTotal);
+    console.log("I am the blue crystal");
+    userTotal += blue;
+    console.log("userTotal");
     $("#userScore").text(userTotal);
 
-    if(userTotal== Random){
+    if(userTotal=== random){
         winning();
+        reset();
     }
 
-    else if (userTotal > Random){
+    else if(userTotal > random){
         losing();
     }
 })
 
 $("#greenCrystal").on ("click",function(){
-    userTotal + userTotal + green;
+    userTotal += green;
     console.log("green" +userTotal);
     $("#userScore").text(userTotal);
 
-    if(userTotal== Random){
+    if(userTotal== random){
         winning();
+        reset();
     }
 
-    else if (userTotal > Random){
+    else if(userTotal > random){
         losing();
     }
 })
 
 $("#pinkCrystal").on ("click",function(){
-    userTotal + userTotal + pink;
+    userTotal +=pink;
     console.log("pink" +userTotal);
     $("#userScore").text(userTotal);
 
-    if(userTotal== Random){
+    if(userTotal== random){
         winning();
+        reset();
     }
 
-    else if (userTotal > Random){
+    else if(userTotal > random){
         losing();
     }
 })
 
 $("#purpleCrystal").on ("click",function(){
-    userTotal + userTotal + purple;
+    userTotal += purple;
     console.log("purple" +userTotal);
     $("#userScore").text(userTotal);
 
-    if(userTotal== Random){
+    if(userTotal== random){
         winning();
+        reset();
     }
 
-    else if (userTotal > Random){
+    else if(userTotal > random){
         losing();
     }
 });
